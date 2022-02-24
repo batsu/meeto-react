@@ -1,38 +1,121 @@
-.App {
+body {
+  font-family: "Montserrat"; }
+
+img {
+  width: 100%; }
+
+header {
+  border-bottom: black 1px solid; }
+
+nav {
+  border-bottom: black 1px solid; }
+
+footer {
+  border-top: black 1px solid;
+  background-image: #d4d4d4;
+  color: white; }
+
+footer a {
+  color: white; }
+
+footer a:hover {
+  color: pink;
+  text-decoration: none; }
+
+.btn-secondary {
+  background-color: #ca7070; }
+
+.btn-primary {
+  background-color: #c22f2f; }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px; }
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.bgimg-1 {
+  background-image: url("/public/assets/images/appt.jpg");
+  min-height: 100%; }
+
+.bgimg-2 {
+  background-image: url("/public/assets/images/hangout.jpg");
+  min-height: 100%; }
+
+.bgimg-3 {
+  background-image: url("/public/assets/images/concert.jpg");
+  min-height: 100%; }
+
+.bgimg-4 {
+  background-image: url("/public/assets/images/whatever.jpg");
+  min-height: 100%; }
+
+.bgimg-5 {
+  background-image: url("/public/assets/images/end.jpg");
+  min-height: 100%; }
+
+.paralax-p {
+  max-width: 400px;
+  font-size: 1.25em;
+  margin: 0 auto; }
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
   text-align: center;
-}
+  color: #000; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.caption span.border {
+  background-color: rgba(14, 14, 14, 0.788);
+  color: #fff;
+  padding: 18px;
+  font-size: 1.5em;
+  letter-spacing: 10px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+    background-attachment: scroll; } }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.modal-backdrop.show {
+  background-color: #996868;
+  opacity: .5; }
 
-.App-link {
-  color: #61dafb;
-}
+body.modal-open {
+  padding-right: 0px !important; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.modal-open {
+  overflow: hidden;
+  /*inherit?*/ }
+
+.navbar {
+  padding-right: 16px !important; }
+
+.meeto-logo {
+  height: 80px; }
+
+button {
+  position: relative;
+  border: none;
+  transition: .4s ease-in;
+  z-index: 1; }
+
+button::before,
+button::after {
+  position: absolute;
+  content: "";
+  z-index: -1; }
+
+.btn-login:hover {
+  box-shadow: 5px 5px 0px #922f45;
+  top: -2px;
+  left: -2px; }
